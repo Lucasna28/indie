@@ -1,0 +1,13 @@
+[
+    {
+        "titel": "billede 1",
+        "image": "/billeder/IMG_1894-kopi.jpg",
+        "sizes": ["8x10", "11x14", "16x20"],
+        "prices": {
+            "8x10": 50,
+            "11x14": 100,
+            "16x20": 150
+      }
+    }
+  ]
+  

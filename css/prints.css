@@ -1,0 +1,116 @@
+.print-container {
+    margin: 20px;
+}
+
+.print-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 3.7rem;
+}
+
+.print-grid li {
+    list-style: none;
+    background-color: #112e42;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.print-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.print-grid p,
+.print-grid label,
+.print-grid select {
+    margin: 10px 0;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.print-grid select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+}
+
+.print-grid button {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.print-grid button:hover {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}
+
+/* Your existing styles for cart-container */
+.cart-container {
+    display: none;
+    position: absolute;
+    top: 4.7rem; /* Adjust the top position according to your layout */
+    right: 0;
+    background-color: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    padding: 20px; /* Adjust padding as needed */
+    z-index: 1;
+    width: 300px; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.cart-container h4 {
+    margin-top: 0;
+    font-size: 1.8rem; /* Adjust font size as needed */
+    color: var(--text-color); /* Adjust color as needed */
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-list li {
+    margin-bottom: 10px;
+}
+
+.cart-container .totalpris {
+    margin-top: 20px;
+    font-size: 1.6rem; /* Adjust font size as needed */
+    color: var(--text-color); /* Adjust color as needed */
+}
+
+.RemoveAll,
+.checkout-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem; /* Adjust font size as needed */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%; /* Full width initially */
+    margin-right: 0; /* No margin initially */
+}
+
+.checkout-btn{
+    background-color: var(--main-color);
+}
+
+.RemoveAll{
+    background-color: var(--alert-color); /* Adjust background color as needed */
+    color: var(--text-color); /* Adjust text color as needed */
+}

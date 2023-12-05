@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prints</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/css/portfolio.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- javascript -->
+    <script defer type="module" src="/javascript/script.js"></script>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Lucas</a>
+        <nav class="navbar">
+            <a href="/index.html"class="nav-link" >Home</a>
+            <a href="about.html"class="nav-link">About</a>
+            <a href="contact.html"class="nav-link">Contact</a>
+            <div class="dropdown">
+                <a href="portfolio.html"class="nav-link">Portfolio</a>
+                <ul class="dropdown-options">
+                    <li>
+                        <a href="/undersider-portfolio/product.html" class="nav-link">Product</a>
+                    </li>
+                    <li>
+                        <a href="/undersider-portfolio/people.html"class="nav-link">people</a>
+                    </li>
+                    <li>
+                        <a href="/undersider-portfolio/nature&buildings.html"class="nav-link">Nature And buildings</a>
+                    </li>
+                    <li>
+                        <a href="/undersider-portfolio/cars.html"class="nav-link">Cars</a>
+                    </li>
+                </ul>
+              </div>
+            <a href="prints.html"class="nav-link">Prints</a>
+            <a class="cart" href="cart.html">
+                <i class='bx bx-cart'></i>
+                <span class="cart-amount">o</span>
+                </div>
+            </a>
+        </nav>
+        <div class="cart-container">
+            <h4>Din indkøbskurv</h4>
+            <ul class="cart-list">
+                <!-- indkøbskurven vises her -->
+            </ul>
+            <p class="totalpris">Pris i alt:
+                <span class="cart-total"></span>
+            </p>
+            <button class="RemoveAll">Remove All Items</button>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </header>
+    <main class="portfolio">
+        <h2 class="heading">My <span>Portfolio</span></h2>
+        <section class="gridcontainer">
+            <article class="wrapper">
+              <a href="./undersider/product.html" class="image">
+                  <img src="/billeder/slideshow-billeder/IMG_2568-kopi.jpg" alt="">
+                  <div class="content">
+                      <h3>product</h3>
+                  </div>
+                </a>
+            </article>
+            <article class="wrapper">
+              <a href="./undersider/cars.html" class="image">
+                  <img src="/billeder/slideshow-billeder/IMG_2333-kopi.jpg" alt="">
+                  <div class="content">
+                      <h3>Cars</h3>
+                  </div>
+                </a>
+            </article>
+            <article class="wrapper">
+              <a href="./undersider/people.html" class="image">
+                  <img src="/billeder/slideshow-billeder/IMG_2783-kopi.jpg" alt="">
+                  <div class="content">
+                      <h3>People</h3>
+                  </div>
+                </a>
+            </article>
+            <article class="wrapper">
+              <a href="./undersider/nature&buildings.html" class="image">
+                  <div class="blur" >
+                    <img src="/billeder/slideshow-billeder/IMG_2808-kopi.jpg" alt="">
+                  </div>
+                  <div class="content long">
+                    <h3>Nature And Buildings</h3>
+                  </div>
+                </a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-text">
+            <p>copyright &copy; 2023 by | All Right Reserved. </p>
+        </div>
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/lucasanderson_photos/" target="_blank"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="footer-icontop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+</body>
+</html>
