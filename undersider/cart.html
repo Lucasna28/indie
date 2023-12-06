@@ -6,10 +6,10 @@
     <title>shopping Cart</title>
     <!-- stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cart.css">
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- javascript -->
-    <script defer src="/javascript/script.js"></script>
 </head>
 <body>
     <header>
@@ -39,7 +39,67 @@
         </nav>
     </header>
     <main class="cart-pg">
-
+        <section class="checkout-container">
+            <div class="cart-info"> 
+                <p>Shopping Cart</p> 
+                <p class="items">X Items</p>
+                <p>Order Summary</p>
+            </div>
+            <span class="line"></span>
+            <div class="container">
+                <div class="product-details-container">
+                    <div class="product-details">
+                        <p>product details</p>
+                        <p>quantity</p>
+                        <p>price</p>
+                        <p>total</p>
+                    </div>
+                    <div class="product-info">
+                        <div class="image-info">
+                            <img class="product-img" src="" alt="">
+                            <p class="product-name">produkt navn</p>
+                            <button class="remove-btn">remove</button>
+                        </div>
+                        <div class="quantity-controls">
+                            <button>-</button>
+                            <p>x</p>
+                            <button>+</button>
+                        </div>
+                        <p class="price">13 kr.</p>
+                        <p class="total">3123 kr.</p>
+                    </div>
+                </div>                
+                <div class="order-summary">
+                    <div class="summary-item">
+                        <p>Quantity x</p>
+                        <p>324312,- kr.</p>
+                    </div>
+                    <div class="summary-item">
+                        <label for="shipping">Shipping</label>
+                        <select id="shipping" name="shipping">
+                            <option value="standard">Standard Shipping - 50,- kr.</option>
+                            <option value="express">Express Shipping - 100,- kr.</option>
+                            <option value="nextDay">Next Day Shipping - 150,- kr.</option>
+                            <option value="free">Free Shipping - 0,- kr.</option>
+                        </select>
+                    </div>                    
+                    <div class="summary-item">
+                        <p>Promo Code</p>
+                        <form action="">
+                            <input type="text">
+                            <button>Apply</button>
+                        </form>
+                    </div>
+                    <div class="summary-item">
+                        <p>Total Cost</p>
+                        <p>324234,- kr.</p>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+                
+            </div>
+            <button class="continue-shopping"><i class='bx bx-md bxs-left-arrow-alt'></i>Continue Shopping</button>
+        </section>
     </main>
     <footer>
         <div class="footer-text">

@@ -16,6 +16,7 @@
     --second-bg-color: hsl(204, 59%, 16%);
     --text-color: hsl(0, 0%, 93%);
     --main-color: hsl(197, 100%, 47%);
+    --succes-color: hsl(122, 39%, 49%);
     --alert-color: hsl(0, 92%, 54%);
 }
 
@@ -37,7 +38,6 @@ header{
     padding: 2rem 9%;
     background-color: var(--second-bg-color);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 100;
     transition: .3s;
@@ -52,6 +52,9 @@ header{
 
 .navbar {
     margin-left: auto;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar a {
@@ -165,9 +168,10 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: var(--second-bg-color);
+    width: 100%;
+    margin-top: 20rem;
 }
 
 .footer-text p{

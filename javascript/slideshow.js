@@ -12,6 +12,7 @@ const images = [
   let autoChangeInterval; // Variabel til at gemme timeren
   
   // Funktion til at opdatere det valgte billede og markere den tilsvarende radio
+
   function updateSelectedImage(imageIndex) {
     const selectedImage = document.getElementById("selected");
     selectedImage.src = images[imageIndex];

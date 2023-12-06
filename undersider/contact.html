@@ -10,7 +10,6 @@
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- javascript -->
-    <script defer src="/javascript/script.js"></script>
     <script defer src="/javascript/contact.js"></script>
 </head>
 <body>
@@ -38,62 +37,56 @@
                 </ul>
               </div>
             <a href="prints.html"class="nav-link">Prints</a>
-            <a class="cart" href="cart.html">
-                <i class='bx bx-cart'></i>
-                <span class="cart-amount">o</span>
-                </div>
-            </a>
         </nav>
-        <div class="cart-container">
-            <h4>Din indkøbskurv</h4>
-            <ul class="cart-list">
-                <!-- indkøbskurven vises her -->
-            </ul>
-            <p class="totalpris">Pris i alt:
-                <span class="cart-total"></span>
-            </p>
-            <button class="RemoveAll">Remove All Items</button>
-            <button class="checkout-btn">Checkout</button>
-        </div>
     </header>
     <main class="contact">
-        <section>
+        <section >
             <h2 class="heading">Contact <span>Me!</span></h2>
         </section>
         <form action="#" class="contactForm" novalidate name="contactForm">
-            <section class="input-box">
+            <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="First Name" required data-errormsg="skriv dit navn!">
+                    <input type="text" placeholder="First Name" name="first-name" required data-errormsg="skriv dit navn!">
                     <span class="statusMessage"></span>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Last Name" data-errormsg="Skriv dit navn!" required>
+                    <input type="text" placeholder="Last Name" name="last-name" data-errormsg="Skriv dit navn!" required>
                     <span class="statusMessage"></span>
                     <span class="focus"></span>
                 </div>
-            </section>
-            <section class="input-box">
+            </div>
+            <div class="input-box">
                 <div class="input-field">
-                    <input type="email" placeholder="Email Address" data-errormsg="skriv en ordentlig email adresse....." required>
+                    <input type="email" placeholder="Email Address" name="email" data-errormsg="skriv en ordentlig email adresse....." required>
                     <span class="statusMessage"></span>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="tel" placeholder="Mobile Number" minlength="12" maxlength="16" required>
+                    <input type="tel" placeholder="Mobile Number" name="number" required>
                     <span class="statusMessage"></span>
                     <span class="focus"></span>
                 </div>
-            </section>
-            <section class="textarea-field">
-                <textarea name="" id="" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="textarea-field">
+                <textarea placeholder="Your Message" name="text" required></textarea>
                 <span class="statusMessage"></span>
                 <span class="focus"></span>
-            </section>
-            <section class="btn-box submit-btn btns">
+            </div>
+            <div class="btn-box submit-btn btns">
                 <button type="submit" class="btn">Submit</button>
-            </section>
+            </div>
         </form>
+        <section class="popup" id="successPopup">
+            <div class="popup-content">
+                <i class='bx bx-check-circle'></i>
+                <h3>Message Sent Successfully!</h3>
+                <div id="formDataContainer" class="popup-form-data"></div>
+                <button id="closePopup">Close</button>
+            </div>
+        </section>
+        
+        
     </main>
     <footer>
         <div class="footer-text">

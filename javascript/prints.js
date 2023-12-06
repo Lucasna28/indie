@@ -18,8 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
         
             return `
                 <li>
-                    <p> class="print-titel" </p>
+                    <p class="print-titel">${print.titel}</p>
                     <img src="${print.image}" alt="Print">
+                    <img src="${print.image1}" alt="print">
                     <p class="print-price">${getPrice(print.sizes[0])}</p>
                     <p for="print-size">Select Print Size:</p>
                     <select name="print-size" class="print-size" data-prices='${JSON.stringify(print.prices)}'>
@@ -67,3 +68,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
