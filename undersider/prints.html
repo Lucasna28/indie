@@ -10,8 +10,9 @@
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- javascript -->
-    <script defer src="/javascript/script.js"></script>
-    <script defer src="/javascript/prints.js"></script>
+    <script defer type="module" src="/javascript/script.js"></script>
+    <script defer type="module" src="/javascript/prints.js"></script>
+    <script defer type="module" src="/javascript/cart.js"></script>
 </head>
 <body>
     <header>
@@ -39,9 +40,8 @@
               </div>
             <a href="prints.html"class="nav-link">Prints</a>
             <a class="cart" href="cart.html">
+                <span class="cart-amount">0</span>
                 <i class='bx bx-cart'></i>
-                <span class="cart-amount">o</span>
-                </div>
             </a>
         </nav>
         <div class="cart-container">
@@ -55,6 +55,7 @@
             <button class="checkout-btn">Checkout</button>
             <button class="RemoveAll">Remove All Items</button>
         </div>
+
     </header>
     <main>
         <h1 class="heading">Buy a Printed <span>Picture</span></h1>

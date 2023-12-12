@@ -39,7 +39,7 @@
  
 .content:hover{
     opacity: 1;
-    backdrop-filter: blur(8px) ;
+    backdrop-filter: blur(8px) ; 
     border-radius: 15px;
 }
 

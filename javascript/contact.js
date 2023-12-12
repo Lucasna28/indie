@@ -104,17 +104,26 @@ function validate(field) {
 
 	if (field.type === "tel") {
 		if (!/^\+?\d{8,}$/.test(field.value)) {
-			field.nextElementSibling.textContent = "Du skal skrive et korrekt telefonnummer!"
+			field.nextElementSibling.textContent = field.dataset.errormsg
 			success = false
 		}
 	}
 
 	if (field.type === "textarea") {
 		if (field.value.length < 15
-			|| field.value.length > 255) {
-				field.nextElementSibling.textContent = "Din besked er dum!"
+			|| field.value.length > 300) {
+                field.nextElementSibling.textContent = field.dataset.errormsg
 				success = false
 			}
 	}
 	
 }
+
+
+const textarea = document.querySelector('textarea');
+const statusMessage = document.querySelector('.textarea-field .statusMessage');
+
+textarea.addEventListener('input', () => {
+    statusMessage.textContent = `${textarea.value.length} characters`;
+});
+

@@ -1,6 +1,5 @@
 // Billeder og indeks
 const images = [
-    "./billeder/slideshow-billeder/IMG_2333-kopi.jpg",
     "./billeder/slideshow-billeder/IMG_2568-kopi.jpg",
     "./billeder/slideshow-billeder/IMG_2808-kopi.jpg",
     "./billeder/slideshow-billeder/IMG_2343-kopi.jpg",

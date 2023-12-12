@@ -17,14 +17,15 @@
     flex-wrap: wrap;
 }
  
-.contact form .input-box .input-field{
+.input-field{
     position: relative;
     width: 49%;
-    margin: .8rem 0;
+    margin: 1.5rem 0;
+    margin-bottom: 3rem;
 }
  
-.contact form .input-box .input-field input,
-.contact form .textarea-field textarea {
+.input-field input,
+.textarea-field textarea {
     width: 100%;
     height: 100%;
     padding: 1.5rem;
@@ -35,26 +36,17 @@
     color: var(--text-color);
 }
  
-.contact form .input-box .input-field input::placeholder,
-.contact form .textarea-field textarea::placeholder{
+.input-box .input-field input::placeholder,
+.textarea-field textarea::placeholder{
     color: var(--text-color);
 }
+
+.input-field input,
+.textarea-field textarea::placeholder
  
-.contact form .focus{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--bg-color);
-    border-radius: .6rem;
-    z-index: -1;
-    transition: .5s;
-}
- 
-.contact form .input-box .input-field input:focus~.focus,
-.contact form .input-box .input-field input:valid~.focus,
-.contact form .textarea-field textarea:focus~.focus,
+.input-field input:focus~.focus,
+.input-field input:valid~.focus,
+.textarea-field textarea:focus~.focus,
 .contact form .textarea-field textarea:valid~.focus{
     width: 100%;
 }
@@ -65,6 +57,8 @@
     display: flex;
     height: 21rem;
 }
+
+.textarea-field:autocomplete
  
 .contact form .textarea-field textarea{
     resize: none;
@@ -74,11 +68,13 @@
     cursor: pointer;
 }
 
+  
 .submit-btn{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 5rem;
 }
 
 .input-field {
@@ -91,13 +87,23 @@
     left: 0;
     width: 100%;
     padding: 0.5rem;
-    background-color: var(--alert-color); /* eller din ønskede baggrundsfarve */
-    color: var(--main-color); /* eller din ønskede tekstfarve */
+    background-color: var(--alert-color);
+    color: var(--main-color);
     border-radius: 0 0 0.6rem 0.6rem;
     font-size: 1.4rem;
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
     z-index: 1;
+    display: none;
 }
+
+.statusMessage:not(:empty) {
+    display: block;
+}
+
+.statusMessage:not(:empty) {
+    display: block;
+}
+
 #successPopup {
     display: none;
     position: fixed;
@@ -153,4 +159,34 @@
     border: none;
     border-radius: 5px;
     font-size: 16px;
+}
+
+
+/* Placeholder i autofyldte felter */
+::-webkit-input-placeholder {
+    /* Farve på placeholder-tekst, juster efter dit design */
+    color: var(--text-color);
+}
+
+/* Tekstfarve i autofyldte felter */
+input:-webkit-autofill {
+    /* Juster baggrundsfarven, så det ser ud som tekst er skrevet i feltet */
+    box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+    /* Farve på teksten, juster efter dit design */
+    -webkit-text-fill-color: var(--text-color);
+    /* Skrifttype, juster efter dit design */
+    font-family: 'Poppins', sans-serif; /* Eksempel på skrifttype (ændre til din foretrukne skrifttype) */ 
+}
+
+/* Overordnet regel for alle input-felter */
+input {
+    font-family: 'Poppins', sans-serif; /* Skrifttype efter eget valg */
+    font-size: 1.6rem; /* Tekststørrelse efter eget valg */
+}
+
+/* Specifikke regler for autofyldte felter */
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px var(--bg-color) inset; /* Juster baggrundsfarven efter dit design */
+    font-family: 'Poppins', sans-serif; /* Skrifttype efter eget valg */
+    font-size: 1.6rem; /* Tekststørrelse efter eget valg */
 }

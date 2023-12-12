@@ -97,9 +97,8 @@ main{
 }
 
 .product-img{
-    background-color: blue;
-    height: 15rem;
-    width: auto;
+    width: 13rem;
+    object-fit: contain;
 }
 
 /* Add styling for the dropdown */
@@ -110,6 +109,117 @@ main{
     font-size: 1rem;
 }
 
+.remove-btn{
+    color: var(--alert-color);
+    background-color: transparent;
+    font-size: small;
 
+}
 
+.image-info{
+    display: flex;
+    margin: 1.5rem 0 0 2rem;
 
+}.product-name{
+    margin-left: 1rem;
+}
+
+.image-info div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.quantity-controls{
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls p{
+    font-size: larger;
+    margin: 0 1rem 0 1rem;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: var(--text-color);
+}
+
+.quantity-controls button{
+    background-color: var(--main-color);
+    width: 5rem;
+    height: 2.5rem;
+    
+}
+
+/* i dit CSS */
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.cart-table th {
+    background-color: #f2f2f2;
+}
+
+.cart-container {
+    display: none;
+    position: absolute;
+    top: 4.7rem;
+    right: 0;
+    background-color: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cart-container h4 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.cart-container .totalpris {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.cart-container .RemoveAll, .cart-container .checkout-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.cart-container .RemoveAll {
+    background-color: var(--alert-color);
+    color: var(--text-color);
+}
+
+.cart-container .checkout-btn {
+    background-color: var(--main-color);
+}
+
+.cart-container .RemoveAll:hover, .cart-container .checkout-btn:hover {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}

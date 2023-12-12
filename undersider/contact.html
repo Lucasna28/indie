@@ -11,6 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- javascript -->
     <script defer src="/javascript/contact.js"></script>
+    <script defer type="module" src="/javascript/script.js"></script>
 </head>
 <body>
     <header>
@@ -40,38 +41,33 @@
         </nav>
     </header>
     <main class="contact">
-        <section >
+        <section>
             <h2 class="heading">Contact <span>Me!</span></h2>
         </section>
         <form action="#" class="contactForm" novalidate name="contactForm">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="First Name" name="first-name" required data-errormsg="skriv dit navn!">
+                    <input type="text" placeholder="First Name" autocomplete="cc-name" name="first-name" required data-errormsg="Write your first name!">
                     <span class="statusMessage"></span>
-                    <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Last Name" name="last-name" data-errormsg="Skriv dit navn!" required>
+                    <input type="text" placeholder="Last Name" name="last-name" data-errormsg="write your last name!" required>
                     <span class="statusMessage"></span>
-                    <span class="focus"></span>
                 </div>
             </div>
             <div class="input-box">
                 <div class="input-field">
-                    <input type="email" placeholder="Email Address" name="email" data-errormsg="skriv en ordentlig email adresse....." required>
+                    <input type="email" placeholder="Email Address" name="email" data-errormsg="write a correct email..!" required>
                     <span class="statusMessage"></span>
-                    <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="tel" placeholder="Mobile Number" name="number" required>
+                    <input type="tel" placeholder="Mobile Number" name="number" data-errormsg="write a correct phone number" required>
                     <span class="statusMessage"></span>
-                    <span class="focus"></span>
                 </div>
             </div>
             <div class="textarea-field">
-                <textarea placeholder="Your Message" name="text" required></textarea>
+                <textarea placeholder="Your Message" name="text" data-errormsg="your message should be between 15-300 characters" required></textarea>
                 <span class="statusMessage"></span>
-                <span class="focus"></span>
             </div>
             <div class="btn-box submit-btn btns">
                 <button type="submit" class="btn">Submit</button>

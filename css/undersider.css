@@ -1,0 +1,79 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 10rem);
+    gap: 2.5rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item-1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+}
+
+.gallery-item-2 {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 3;
+}
+
+.gallery-item-3 {
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 3;
+}
+
+.gallery-item-4 {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 3;
+}
+
+.gallery-item-5 {
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 3;
+}
+
+.gallery-item-6 {
+    grid-column: 5 / span 1;
+    grid-row: 4 / span 3;
+}
+
+
+/* modal.css */
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}

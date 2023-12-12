@@ -65,7 +65,6 @@ header{
     transition: .3s;
 }
 
-
 .dropdown {
     display: inline-block;
     position: relative;
@@ -98,8 +97,8 @@ header{
 }
 
 main {
-    height: 100vh;
     padding: 10rem 9% 2rem;
+    min-height: 100vh;
 }
 
 .btn-box{
@@ -171,7 +170,7 @@ footer{
     padding: 2rem 9%;
     background: var(--second-bg-color);
     width: 100%;
-    margin-top: 20rem;
+    margin-top: 5rem;
 }
 
 .footer-text p{
@@ -271,11 +270,12 @@ footer{
     margin-bottom: 3rem;
     text-align: center;
  }
+
 .heading span{
     color: var(--main-color); 
  }
 
  .navbar .nav-link.active {
-    color: var(--main-color); /* Skift farven til din ønskede farve */
-    font-weight: bold; /* Gør teksten fed, eller anvend andre stilarter efter behov */
+    color: var(--main-color); 
+    font-weight: bold; 
 }

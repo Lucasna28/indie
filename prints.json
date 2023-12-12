@@ -1,19 +1,21 @@
 [
-    {
-        "titel": "billede 1",
-        "image": "/billeder/prints/frame1-pic.jpg",
-        "image1": "/billeder/prints/frame1pid-full.jpg",
-        "sizes": ["8x10", "11x14", "16x20"],
-        "prices": {
-            "8x10": 50,
-            "11x14": 100,
-            "16x20": 150
-      }
-    },
-    {
-      "titel": "billede 1",
-      "image": "/billeder/prints/frame-pic1.jpg",
-      "image1": "/billeder/prints/frame-pic1full.jpg",
+  {
+    "titel": "billede 1",
+    "image": "/billeder/prints/frame1-pic.jpg",
+    "image1": "/billeder/prints/frame1pid-full.jpg",
+    "sizes": ["8x10", "11x14", "16x20", "20x24", "24x30"],
+    "prices": {
+        "8x10": 50,
+        "11x14": 100,
+        "16x20": 150,
+        "20x24": 200,
+        "24x30": 250
+    }
+},
+  {
+      "titel": "billede 2",
+      "image": "/billeder/prints/frame1-pic.jpg",
+      "image1": "/billeder/prints/frame1pid-full.jpg",
       "sizes": ["8x10", "11x14", "16x20"],
       "prices": {
           "8x10": 50,
@@ -22,9 +24,9 @@
     }
   },
   {
-    "titel": "billede 1",
-    "image": "/billeder/prints/frame-pic1.jpg",
-    "image1": "/billeder/prints/frame-pic1full.jpg",
+    "titel": "billede 3",
+    "image": "/billeder/prints/frame1-pic.jpg",
+    "image1": "/billeder/prints/frame1pid-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -33,9 +35,9 @@
   }
   },
   {
-    "titel": "billede 1",
-    "image": "/billeder/prints/frame-pic1.jpg",
-    "image1": "/billeder/prints/frame-pic1full.jpg",
+    "titel": "billede 4",
+    "image": "/billeder/prints/frame1-pic.jpg",
+    "image1": "/billeder/prints/frame1pid-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -44,9 +46,9 @@
   }
   },
   {
-    "titel": "billede 1",
-    "image": "/billeder/prints/frame-pic1.jpg",
-    "image1": "/billeder/prints/frame-pic1full.jpg",
+    "titel": "billede 5",
+    "image": "/billeder/prints/frame1-pic.jpg",
+    "image1": "/billeder/prints/frame1pid-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -55,9 +57,9 @@
   }
   },
   {
-    "titel": "billede 1",
-    "image": "/billeder/prints/frame-pic1.jpg",
-    "image1": "/billeder/prints/frame-pic1full.jpg",
+    "titel": "billede 6",
+    "image": "/billeder/prints/frame1-pic.jpg",
+    "image1": "/billeder/prints/frame1pid-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -66,9 +68,9 @@
   }
   },
   {
-    "titel": "billede 1",
-    "image": "/billeder/prints/frame-pic1.jpg",
-    "image1": "/billeder/prints/frame-pic1full.jpg",
+    "titel": "billede 7",
+    "image": "/billeder/prints/frame1-pic.jpg",
+    "image1": "/billeder/prints/frame1pid-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -77,9 +79,9 @@
   }
   },
   {
-    "titel": "billede 1",
-    "image": "/billeder/prints/frame-pic1.jpg",
-    "image1": "/billeder/prints/frame-pic1full.jpg",
+    "titel": "billede 8",
+    "image": "/billeder/prints/frame1-pic.jpg",
+    "image1": "/billeder/prints/frame1pid-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -87,5 +89,5 @@
         "16x20": 150
   }
 }
-  ]
+]
   
