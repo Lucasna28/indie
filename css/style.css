@@ -171,7 +171,7 @@ footer{
     padding: 2rem 9%;
     background: var(--second-bg-color);
     width: 100%;
-    margin-top: auto;
+    margin-top: 10rem;
     z-index: 100;
     position: absolute;
     bottom: 0;
