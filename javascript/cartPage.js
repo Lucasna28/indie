@@ -1,6 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
     const cartContainer = document.querySelector(".product-info-container");
     const cartSummary = document.querySelector(".cart-summary");
+    const shippingSelect = document.getElementById("shipping");
+    const checkoutBtn = document.querySelector(".checkout-btn");
+    const modalContainer = document.getElementById("modalContainer");
+    const orderDetailsContainer = document.getElementById("orderDetails");
+    const totalCostContainer = document.getElementById("totalCost");
+
+
+    // Function to handle checkout button click
+    checkoutBtn.addEventListener("click", function () {
+        // Check if credit card information is filled out
+        const cardNumber = document.getElementById("cardNumber").value.trim();
+        const expiryDate = document.getElementById("expiryDate").value.trim();
+        const cvv = document.getElementById("cvv").value.trim();
+
+        if (cardNumber === "" || expiryDate === "" || cvv === "") {
+            alert("Please fill out credit card information before proceeding.");
+        } else {
+            // Display modal with order summary
+            showModal();d
+        }
+    });
+
+
+    // Funktion til at lukke modalen
+    window.closeModal = function () {
+        modalContainer.style.display = "none";
+    };
+
 
     // Hent gemte varer fra localStorage
     let cartItems = [];
@@ -14,6 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
     cartItems.forEach(item => {
         const itemHTML = createCartItemHTML(item);
         cartContainer.innerHTML += itemHTML;
+    });
+
+    // Tilføj event listener til shipping elementet
+    shippingSelect.addEventListener("change", function () {
+        // Opdater indkøbskurvens opsummering ved ændring af shipping
+        calculateCartSummary();
     });
 
     function updateCartItemQuantity(title, size, quantityChange) {
@@ -121,12 +155,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Beregn total antal og total pris
         const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
-        const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+        const totalPrice = cartItems.reduce((total, item) => total + parseFloat(item.price) * item.quantity, 0);
+
+        // Hent shippingomkostningerne baseret på det valgte shipping-alternativ
+        const selectedShippingOption = shippingSelect.value;
+        let shippingCost = 0;
+
+        switch (selectedShippingOption) {
+            case "standard":
+                shippingCost = 50;
+                break;
+            case "express":
+                shippingCost = 100;
+                break;
+            case "nextDay":
+                shippingCost = 150;
+                break;
+        }
 
         // Opdater HTML-elementerne med de beregnede værdier
         totalQuantityElement.innerText = `Quantity ${totalQuantity}x`;
-
-       
+        totalPriceElement.innerText = `${(totalPrice + shippingCost).toFixed(2)} kr.`;
     }
 
     function createCartItemHTML(item) {
@@ -153,4 +202,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Opdater knapper til fjernelse og opdatering af mængde ved initialisering
     updateButtons();
+    // Opdater indkøbskurvens opsummering ved indlæsning
+    calculateCartSummary();
+    
 });
+

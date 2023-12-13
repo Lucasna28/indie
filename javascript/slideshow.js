@@ -1,11 +1,11 @@
 // Billeder og indeks
 const images = [
-    "./billeder/slideshow-billeder/dtm1-kopi.jpg",
-    "./billeder/slideshow-billeder/IMG_2343-kopi.jpg",
-    "./billeder/slideshow-billeder/IMG_6740-kopi.jpg",
-    "./billeder/slideshow-billeder/IMG_2808-kopi.jpg",
-    "./billeder/slideshow-billeder/IMG_7040-kopi.jpg",
-    "./billeder/slideshow-billeder/IMG_2783-kopi.jpg"
+    "./billeder/slideshow-billeder/dtm1-kopi.jpeg",
+    "./billeder/slideshow-billeder/IMG_2343-kopi.jpeg",
+    "./billeder/slideshow-billeder/IMG_6740-kopi.jpeg",
+    "./billeder/slideshow-billeder/IMG_2808-kopi.jpeg",
+    "./billeder/slideshow-billeder/IMG_7040-kopi.jpeg",
+    "./billeder/slideshow-billeder/IMG_2783-kopi.jpeg"
   ];
   
   let currentIndex = 0;

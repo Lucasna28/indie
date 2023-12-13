@@ -37,7 +37,7 @@
   {
     "titel": "billede 4",
     "image": "/billeder/prints/frame4-pic.jpg",
-    "image1": "/billeder/prints/frame4pic-full.jpg",
+    "image1": "/billeder/prints/frame4pic-full.jpeg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,

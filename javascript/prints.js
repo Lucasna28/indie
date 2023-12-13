@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const printGrid = document.querySelector(".print-grid");
+    const cartAmountElement = document.querySelector(".cart-amount");
 
     fetch("/prints.json")
         .then(response => response.json())
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <img class="slide" src="${window.location.origin + print.image1}" alt="print">
                     <button class="next-btn btn">&gt;</button>
                 </div>
-                <p class="print-price">${getPrice(print.sizes[0])}</p>
+                <p class="print-price" id="print-price-${print.titel}">${getPrice(print.sizes[0])}</p>
                 <p for="print-size">Select Print Size:</p>
                 <select name="print-size" class="print-size" data-prices='${JSON.stringify(print.prices)}'>
                     ${createOptionsHTML(print.sizes)}
@@ -40,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function initSlideshow() {
         const slideshows = document.querySelectorAll(".slideshow-container");
-
         slideshows.forEach(initSlideshowContainer);
     }
 
@@ -84,6 +84,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+        printGrid.addEventListener("change", function (event) {
+            if (event.target.classList.contains("print-size")) {
+                handlePrintSizeChange(event);
+            }
+        });
+
         // Add event listener for the checkout button
         const checkoutButton = document.querySelector(".checkout-btn");
         if (checkoutButton) {
@@ -94,22 +100,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function handlePrintSizeChange(event) {
+        const selectedSize = event.target.value;
+        const pricesData = event.target.dataset.prices;
+
+        const printPriceElement = event.target.parentElement.querySelector(".print-price");
+        printPriceElement.textContent = getPrice(pricesData, selectedSize);
+    }
+
     function handleBuyButtonClick(event) {
         const printTitle = event.target.parentElement.querySelector(".print-titel").textContent;
         const printSizeSelect = event.target.parentElement.querySelector(".print-size");
         const selectedSize = printSizeSelect.value;
         const printImage = event.target.parentElement.querySelector(".slide").src;
-    
+
         const cartItem = {
             title: printTitle,
             size: selectedSize,
             price: getPrice(event.target.parentElement.dataset.prices, selectedSize),
             image: printImage,
         };
-    
+
         addToCart(cartItem);
     }
-    
+
     function addToCart(item) {
         let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
@@ -127,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateCartUI() {
-        const cartAmountElement = document.querySelector(".cart-amount");
         const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
         const totalUniqueItems = cartItems.reduce((total, item) => total + (item.quantity || 1), 0);
 

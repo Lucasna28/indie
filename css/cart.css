@@ -100,8 +100,18 @@ main{
     width: 13rem;
     object-fit: contain;
 }
+.total-quantity{
+    font-size: medium;
+}
 
-/* Add styling for the dropdown */
+.total-price{
+    font-size: medium;
+}
+
+.summary-item{
+    margin-bottom: 4rem;
+}
+
 .summary-item select {
     width: 100%;
     padding: 0.5rem;
@@ -254,4 +264,57 @@ main{
     align-items: center;
     width: 20rem;
     height: 5rem;
+}
+
+
+
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: var(--second-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 600px;
+    position: relative;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+.credit-card-input {
+    margin-bottom: 20px;
+}
+
+.credit-card-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.credit-card-input input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }

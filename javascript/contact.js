@@ -58,8 +58,6 @@ function updatePopupContent(formData) {
     }
 }
 
-
-
 // Add an event listener to close the popup when the "Close" button is clicked
 document.getElementById("closePopup").addEventListener("click", function () {
     document.getElementById("successPopup").style.display = "none";

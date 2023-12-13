@@ -274,6 +274,12 @@ footer{
     text-align: center;
  }
 
+.heading1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 .heading span{
     color: var(--main-color); 
  }

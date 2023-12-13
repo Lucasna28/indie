@@ -63,7 +63,6 @@
                 <div class="order-summary">
                     <div class="summary-item">
                         <p class="total-quantity">Quantity x</p>
-                        <p class="total-price"> kr.</p>
                     </div>
                     <div class="summary-item">
                         <label for="shipping">Shipping</label>
@@ -71,9 +70,8 @@
                             <option value="standard">Standard Shipping - 50,- kr.</option>
                             <option value="express">Express Shipping - 100,- kr.</option>
                             <option value="nextDay">Next Day Shipping - 150,- kr.</option>
-                            <option value="free">Free Shipping - 0,- kr.</option>
                         </select>
-                    </div>                    
+                    </div>                  
                     <div class="summary-item">
                         <p>Promo Code</p>
                         <form action="">
@@ -83,11 +81,20 @@
                     </div>
                     <div class="summary-item">
                         <p>Total Cost</p>
-                        <p>324234,- kr.</p>
+                        <p class="total-price"> kr.</p>
                     </div>
-                    <button class="checkout-btn">Checkout</button>
+                    <div class="credit-card-input">
+                        <label for="cardNumber">Card Number:</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                        
+                        <label for="expiryDate">Expiry Date:</label>
+                        <input type="text" id="expiryDate" placeholder="MM/YY">
+                        
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" placeholder="123">
+                    </div>                
+                <button class="checkout-btn" onclick="openModal()">Checkout</button>
                 </div>
-                
             </div>
             <button class="continue-shopping"><i class='bx bx-md bxs-left-arrow-alt'></i>Continue Shopping</button>
         </section>
