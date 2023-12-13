@@ -43,16 +43,24 @@
     <main class="People">
         <h1 class="heading">People</h1>
         <section class="image-grid">
-            <img src="/billeder/cars/img1.jpg" class="gallery-item-1" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-2" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-3" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-4" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-5" alt="">
-            <img src="/billeder/cars/img1.jpg" class="gallery-item-6" alt="">
+            <img src="/billeder/people/IMG_5403.jpg" class="gallery-item-1" alt="">
+            <img src="/billeder/people/IMG_5412.jpg" class="gallery-item-2" alt="">
+            <img src="/billeder/people/IMG_8915.jpg" class="gallery-item-3" alt="">
+            <img src="/billeder/people/portrait.jpg" class="gallery-item-4" alt="">
+            <img src="/billeder/people/portrait2.jpg" class="gallery-item-5" alt="">
+            <img src="/billeder/people/smed-valgfri.jpeg" class="gallery-item-6" alt="">
         </section>
-    
-
-        <button id="backBtn" class="back-btn">Back to Portfolio</button>
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&#x00D7;</span>
+            <div class="modal-content">
+                <img id="modalImage" class="modal-image" alt="">
+                <button class="modal-prev" onclick="changeImage(-1)">&#10094;</button>
+                <button class="modal-next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </div>        
+        <div class="btn-box">
+            <button class="btn back-btn" onclick="goToPortfolio()">Back to Portfolio</button>
+        </div>
     </main>
     <footer>
         <div class="footer-text">

@@ -44,17 +44,34 @@
     <main class="cars">
         <h1 class="heading">Cars</h1>
         <section class="image-grid">
-            <img src="/billeder/cars/img1.jpg" class="gallery-item-1" alt="">
+            <img src="/billeder/cars/drift7l.jpg" class="gallery-item-1" alt="">
             <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-2" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-3" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-4" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-5" alt="">
-            <img src="/billeder/cars/img1.jpg" class="gallery-item-6" alt="">
+            <img src="/billeder/slideshow-billeder/IMG_2333-kopi.jpg" class="gallery-item-3" alt="">
+            <img src="/billeder/prints/frame1pid-full.jpg" class="gallery-item-4" alt="">
+            <img src="/billeder/slideshow-billeder/IMG_2783-kopi.jpg" class="gallery-item-5" alt="">
+            <img src="/billeder/cars/drift2l.jpg" class="gallery-item-6" alt="">
+            <img src="/billeder/cars/drift3l.jpg" class="gallery-item-7" alt="">
+            <img src="/billeder/cars/drift4l.jpg" class="gallery-item-8" alt="">
+            <img src="/billeder/cars/dtm1.jpg" class="gallery-item-9" alt="">
+            <img src="/billeder/cars/drift5l.jpg" class="gallery-item-10" alt="">
+            <img src="/billeder/cars/drift6l.jpg" class="gallery-item-11" alt="">
+            <img src="/billeder/cars/pic1.jpeg" class="gallery-item-12" alt="">
+            <img src="/billeder/cars/drift1l.jpg" class="gallery-item-13" alt="">
+            <img src="/billeder/cars/dtm2.jpg" class="gallery-item-14" alt="">
+            <img src="/billeder/cars/dtm3.jpg" class="gallery-item-15" alt="">
+            <img src="/billeder/cars/pic2.jpg" class="gallery-item-16" alt="">
         </section>
-        
-
-
-        <button id="backBtn" class="back-btn">Back to Portfolio</button>
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&#x00D7;</span>
+            <div class="modal-content">
+                <img id="modalImage" class="modal-image" alt="">
+                <button class="modal-prev" onclick="changeImage(-1)">&#10094;</button>
+                <button class="modal-next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </div>        
+        <div class="btn-box">
+            <button class="btn back-btn" onclick="goToPortfolio()">Back to Portfolio</button>
+        </div>
     </main>
     <footer>
         <div class="footer-text">

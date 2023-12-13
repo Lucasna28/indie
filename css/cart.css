@@ -152,8 +152,6 @@ main{
     
 }
 
-/* i dit CSS */
-
 .cart-table {
     width: 100%;
     border-collapse: collapse;
@@ -222,4 +220,38 @@ main{
 .cart-container .RemoveAll:hover, .cart-container .checkout-btn:hover {
     background-color: var(--bg-color);
     color: var(--main-color);
+}
+
+.quantity-btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .9rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 2rem;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2rem 0 2rem;
+}
+
+.quantity-btn:hover{
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}
+
+.quantity-btn-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    height: 5rem;
 }

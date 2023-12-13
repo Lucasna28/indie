@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <li data-prices='${JSON.stringify(print.prices)}'>
                 <p class="print-titel">${print.titel}</p>
                 <div class="slideshow-container">
-                    <button class="previous-btn">&lt;</button>
-                    <img class="slide" src="${absoluteImagePath}" alt="Print">
-                    <img class="slide" src="${absoluteImagePath}" alt="print">
-                    <button class="next-btn">&gt;</button>
+                    <button class="previous-btn btn">&lt;</button>
+                    <img class="slide" src="${window.location.origin + print.image}" alt="Print">
+                    <img class="slide" src="${window.location.origin + print.image1}" alt="print">
+                    <button class="next-btn btn">&gt;</button>
                 </div>
                 <p class="print-price">${getPrice(print.sizes[0])}</p>
                 <p for="print-size">Select Print Size:</p>

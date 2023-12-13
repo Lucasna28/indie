@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const cartContainer = document.querySelector(".product-info-container");
+    const cartSummary = document.querySelector(".cart-summary");
 
     // 1. Hent indkøbskurvdata fra localStorage
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -9,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 3. Indsæt det genererede HTML i product-info-container i cart.html
     cartContainer.innerHTML = cartHTML;
+
+    // 4. Opdater indkøbskurvens opsummering
+    calculateCartSummary();
 
     function createCartItemHTML(item) {
         return `
@@ -20,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         <button class="remove-btn" onclick="removeCartItem('${item.title}', '${item.size}')">Remove</button>
                     </div>
                 </div>
-                <div class="btn-box">
-                    <button class="btn minus-quantity" onclick="updateCartItemQuantity('${item.title}', '${item.size}', -1)">-</button>
+                <div class="quantity-btn-container">
+                    <button class="quantity-btn minus-quantity" onclick="updateCartItemQuantity('${item.title}', '${item.size}', -1)">-</button>
                     <p class="quantity" id="quantity-${item.title}-${item.size}">${item.quantity}</p>
-                    <button class="btn plus-quantity" onclick="updateCartItemQuantity('${item.title}', '${item.size}', 1)">+</button>
+                    <button class="quantity-btn plus-quantity" onclick="updateCartItemQuantity('${item.title}', '${item.size}', 1)">+</button>
                 </div>
                 <p class="price">${item.price}</p>
                 <p class="total-price">${(item.price * item.quantity).toFixed(2)} kr</p>
@@ -46,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Update the localStorage with the new quantity
             updateLocalStorage(title, size, currentQuantity);
+            calculateCartSummary(); // Opdater opsummeringen
         } else {
             // If the new quantity is less than 0, remove the item from the cart
             removeCartItem(title, size);
@@ -68,6 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Opdater product-info-container med den opdaterede indkøbskurv
             updateProductInfoContainer();
+
+            // Opdater indkøbskurvens opsummering
+            calculateCartSummary();
         }
     }
 
@@ -87,6 +95,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Opdater product-info-container med den opdaterede indkøbskurv
             updateProductInfoContainer();
+
+            // Opdater indkøbskurvens opsummering
+            calculateCartSummary();
         }
     }
 
@@ -101,5 +112,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Indsæt det genererede HTML i product-info-container i cart.html
         cartContainer.innerHTML = cartHTML;
+    }
+
+    function calculateCartSummary() {
+        const totalQuantityElement = document.querySelector(".total-quantity");
+        const totalPriceElement = document.querySelector(".total-price");
+
+        // Hent indkøbskurvdata fra localStorage
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        // Beregn total antal og total pris
+        const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+        const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
+        // Opdater HTML-elementerne med de beregnede værdier
+        totalQuantityElement.innerText = `Quantity ${totalQuantity}x`;
+        totalPriceElement.innerText = `${totalPrice.toFixed(2)} kr.`;
     }
 });

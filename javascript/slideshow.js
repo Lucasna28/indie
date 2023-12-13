@@ -1,8 +1,10 @@
 // Billeder og indeks
 const images = [
-    "./billeder/slideshow-billeder/IMG_2568-kopi.jpg",
-    "./billeder/slideshow-billeder/IMG_2808-kopi.jpg",
+    "./billeder/slideshow-billeder/dtm1-kopi.jpg",
     "./billeder/slideshow-billeder/IMG_2343-kopi.jpg",
+    "./billeder/slideshow-billeder/IMG_6740-kopi.jpg",
+    "./billeder/slideshow-billeder/IMG_2808-kopi.jpg",
+    "./billeder/slideshow-billeder/IMG_7040-kopi.jpg",
     "./billeder/slideshow-billeder/IMG_2783-kopi.jpg"
   ];
   
@@ -65,7 +67,7 @@ const images = [
   updateSelectedImage(currentIndex);
   
   // Start timeren for automatisk billedskift
-  autoChangeInterval = setInterval(autoChangeImage, 2500); // 25000 millisekunder (2,5 sekunder)
+  autoChangeInterval = setInterval(autoChangeImage, 5000); // 50000 millisekunder (5 sekunder)
   
   // Pause autoChangeImage når der bliver hover over #selected
   document.getElementById("selected").addEventListener("mouseenter", function () {

@@ -52,10 +52,6 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.print-grid button:hover {
-    background-color: var(--bg-color);
-    color: var(--main-color);
-}
 
 /* Your existing styles for cart-container */
 .cart-container {
@@ -132,11 +128,10 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #ddd;
     border: none;
-    color: #333;
     padding: 10px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .previous-btn {
@@ -159,8 +154,6 @@
     margin-right: 5px; /* Adjust the margin as needed for spacing */
     font-size: 14px; /* Adjust the font size as needed */
 }
-
-/* i dit CSS */
 
 .cart-list {
     list-style: none;
@@ -259,4 +252,6 @@
 .cart-list li .cart-item-details {
     flex-grow: 1;
 }
+
+
 

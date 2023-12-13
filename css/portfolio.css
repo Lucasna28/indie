@@ -1,18 +1,19 @@
 .gridcontainer{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 0.5fr);
     gap: 2rem;
 }
  
 .gridcontainer article img{
-    height: 100%;
+    height: 55rem;
     width: 100%;
     object-fit: contain;
-    border-radius: 15px;
+    border-radius: 3rem;
+
 } 
 
 .wrapper{
-    width: 100%;
+    width: 38.5rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -35,6 +36,7 @@
     flex-direction: column;
     opacity: 0;
     transition: 1.s;
+    border-radius: 3rem;
 }
  
 .content:hover{

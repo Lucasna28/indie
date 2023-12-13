@@ -2,7 +2,7 @@
   {
     "titel": "billede 1",
     "image": "/billeder/prints/frame1-pic.jpg",
-    "image1": "/billeder/prints/frame1pid-full.jpg",
+    "image1": "/billeder/prints/frame1pic-full.jpg",
     "sizes": ["8x10", "11x14", "16x20", "20x24", "24x30"],
     "prices": {
         "8x10": 50,
@@ -14,8 +14,8 @@
 },
   {
       "titel": "billede 2",
-      "image": "/billeder/prints/frame1-pic.jpg",
-      "image1": "/billeder/prints/frame1pid-full.jpg",
+      "image": "/billeder/prints/frame2-pic.jpg",
+      "image1": "/billeder/prints/frame2pic-full.jpg",
       "sizes": ["8x10", "11x14", "16x20"],
       "prices": {
           "8x10": 50,
@@ -25,8 +25,8 @@
   },
   {
     "titel": "billede 3",
-    "image": "/billeder/prints/frame1-pic.jpg",
-    "image1": "/billeder/prints/frame1pid-full.jpg",
+    "image": "/billeder/prints/frame3-pic.jpg",
+    "image1": "/billeder/prints/frame3pic-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -36,8 +36,8 @@
   },
   {
     "titel": "billede 4",
-    "image": "/billeder/prints/frame1-pic.jpg",
-    "image1": "/billeder/prints/frame1pid-full.jpg",
+    "image": "/billeder/prints/frame4-pic.jpg",
+    "image1": "/billeder/prints/frame4pic-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -47,8 +47,8 @@
   },
   {
     "titel": "billede 5",
-    "image": "/billeder/prints/frame1-pic.jpg",
-    "image1": "/billeder/prints/frame1pid-full.jpg",
+    "image": "/billeder/prints/frame5-pic.jpg",
+    "image1": "/billeder/prints/frame5pic-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -58,8 +58,8 @@
   },
   {
     "titel": "billede 6",
-    "image": "/billeder/prints/frame1-pic.jpg",
-    "image1": "/billeder/prints/frame1pid-full.jpg",
+    "image": "/billeder/prints/frame6-pic.jpg",
+    "image1": "/billeder/prints/frame6pic-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -69,8 +69,8 @@
   },
   {
     "titel": "billede 7",
-    "image": "/billeder/prints/frame1-pic.jpg",
-    "image1": "/billeder/prints/frame1pid-full.jpg",
+    "image": "/billeder/prints/frame7-pic.jpg",
+    "image1": "/billeder/prints/frame7pic-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,
@@ -80,8 +80,8 @@
   },
   {
     "titel": "billede 8",
-    "image": "/billeder/prints/frame1-pic.jpg",
-    "image1": "/billeder/prints/frame1pid-full.jpg",
+    "image": "/billeder/prints/frame8-pic.jpg",
+    "image1": "/billeder/prints/frame8pic-full.jpg",
     "sizes": ["8x10", "11x14", "16x20"],
     "prices": {
         "8x10": 50,

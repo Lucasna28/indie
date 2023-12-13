@@ -98,7 +98,7 @@ header{
 
 main {
     padding: 10rem 9% 2rem;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 .btn-box{
@@ -171,6 +171,9 @@ footer{
     background: var(--second-bg-color);
     width: 100%;
     margin-top: 5rem;
+    position: static;
+    bottom: 0;
+    z-index: 100;
 }
 
 .footer-text p{

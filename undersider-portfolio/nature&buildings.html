@@ -41,19 +41,44 @@
         </nav>
     </header>
     <main class="Nature&buildings">
-        <h1 class="heading">Nature and Buildings</h1>
+        <h1 class="heading">Nature and <span>Buildings</span></h1>
         <section class="image-grid">
-            <img src="/billeder/cars/img1.jpg" class="gallery-item-1" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-2" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-3" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-4" alt="">
-            <img src="/billeder/IMG_1894-kopi.jpg" class="gallery-item-5" alt="">
-            <img src="/billeder/cars/img1.jpg" class="gallery-item-6" alt="">
+            <img src="/billeder/buildings&nature/arkitektur.jpeg" class="gallery-item-1" alt="">
+            <img src="/billeder/buildings&nature/IMG_2872.jpg" class="gallery-item-2" alt="">
+            <img src="/billeder/buildings&nature/IMG_2908.jpg" class="gallery-item-3" alt="">
+            <img src="/billeder/buildings&nature/IMG_2915.jpg" class="gallery-item-4" alt="">
+            <img src="/billeder/buildings&nature/IMG_4672.jpg" class="gallery-item-5" alt="">
+            <img src="/billeder/buildings&nature/IMG_6740.jpg" class="gallery-item-6" alt="">
+            <img src="/billeder/buildings&nature/IMG_6752.jpg" class="gallery-item-7" alt="">
+            <img src="/billeder/buildings&nature/IMG_6765.jpg" class="gallery-item-8" alt="">
+            <img src="/billeder/buildings&nature/IMG_6879.jpg" class="gallery-item-9" alt="">
+            <img src="/billeder/buildings&nature/IMG_6888.jpg" class="gallery-item-10" alt="">
+            <img src="/billeder/buildings&nature/IMG_7032_3.jpg" class="gallery-item-11" alt="">
+            <img src="/billeder/buildings&nature/IMG_7040.jpg" class="gallery-item-12" alt="">
+            <img src="/billeder/buildings&nature/IMG_8679.jpg" class="gallery-item-13" alt="">
+            <img src="/billeder/buildings&nature/IMG_8709.jpg" class="gallery-item-14" alt="">
+            <img src="/billeder/buildings&nature/IMG_8715.jpg" class="gallery-item-15" alt="">
+            <img src="/billeder/buildings&nature/IMG_8728.jpg" class="gallery-item-16" alt="">
+            <img src="/billeder/buildings&nature/IMG_8834.jpg" class="gallery-item-17" alt="">
+            <img src="/billeder/buildings&nature/IMG_8869.jpg" class="gallery-item-18" alt="">
+            <img src="/billeder/buildings&nature/IMG_8870.jpg" class="gallery-item-19" alt="">
+            <img src="/billeder/buildings&nature/nature.jpeg" class="gallery-item-20" alt="">
+            <img src="/billeder/buildings&nature/nature2.jpeg" class="gallery-item-21" alt="">
+            <img src="/billeder/buildings&nature/nature3.jpg" class="gallery-item-22" alt="">
+            <img src="/billeder/buildings&nature/nature5.jpeg" class="gallery-item-24" alt="">
+            <img src="/billeder/buildings&nature/nature6.jpeg" class="gallery-item-25" alt="">
         </section>
-        
-
-
-        <button id="backBtn" class="back-btn">Back to Portfolio</button>
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&#x00D7;</span>
+            <div class="modal-content">
+                <img id="modalImage" class="modal-image" alt="">
+                <button class="modal-prev" onclick="changeImage(-1)">&#10094;</button>
+                <button class="modal-next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </div>        
+        <div class="btn-box">
+            <button class="btn back-btn" onclick="goToPortfolio()">Back to Portfolio</button>
+        </div>
     </main>
     <footer>
         <div class="footer-text">

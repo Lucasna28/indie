@@ -4,12 +4,11 @@ section{
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 50%;
     margin-left: 1rem;
 }
 #selected {
-    margin-top: 5rem;
-    width: 50rem;
+    width: 70rem;
+    height: 50rem;
     object-fit: contain;
     transition: opacity 0.3s, transform 0.5s; /* Tilføj en overgangseffekt for både opacity og transform */
     transform: scale(1); /* Tilføj standard transform-skala */
@@ -23,9 +22,9 @@ section{
 .radio-buttons {
     display: flex;
     justify-content: center;
-    align-items: center; /* Ændret fra align-items: flex-end; */
+    align-items: center; 
     position: absolute;
-    bottom: 1rem;
+    bottom: 4rem;
     width: 100%;
     padding: 0.5rem; 
     cursor: pointer;
@@ -36,13 +35,12 @@ section{
     cursor: pointer;
 }
 
-/* Tilføj nogle stilarter til de valgte radio-knapper */
 .radio-buttons input[type="radio"]:checked + label {
-    border: 2px solid #0077cc; /* Tilføj en grænse til valgte radio-knapper */
-    background-color: #0077cc; /* Baggrundsfarve for valgte radio-knapper */
-    color: white; /* Tekstfarve for valgte radio-knapper */
-    padding: 0.2rem 0.5rem; /* Tilpasning af polstring for valgte radio-knapper */
-    border-radius: 5px; /* Afrundede hjørner for valgte radio-knapper */
+    border: 2px solid #0077cc; 
+    background-color: #0077cc; 
+    color: white; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
     cursor: pointer;
 }
 
@@ -62,6 +60,7 @@ input{
     border-radius: 4px; /* Runde hjørner */
     transition: background 0.3s; /* Tilføj en overgangseffekt for baggrundsfarven */
     z-index: 3;
+    margin-bottom: 8rem;
 }
 
 .prev-button:hover,
