@@ -4,6 +4,11 @@
     grid-auto-rows: 30rem; 
     gap: 1.5rem; 
     grid-auto-flow: dense; 
+    height: 100%;
+}
+
+.undersider{
+    height: 100%;
 }
 
 img {
