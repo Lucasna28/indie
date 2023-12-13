@@ -1,4 +1,4 @@
-section{
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,45 +6,53 @@ section{
     position: relative;
     margin-left: 1rem;
 }
+
 #selected {
     width: 70rem;
     height: 50rem;
     object-fit: contain;
-    transition: opacity 0.3s, transform 0.5s; /* Tilføj en overgangseffekt for både opacity og transform */
-    transform: scale(1); /* Tilføj standard transform-skala */
+    transition: opacity 0.3s, transform 0.5s;
+    transform: scale(1);
 }
-  
+
 #selected:hover {
-    opacity: 1; /* Ændre gennemsigtigheden ved hover */
-    transform: scale(1.01); /* Skalér billedet lidt større ved hover */
+    opacity: 1;
+    transform: scale(1.01);
 }
 
 .radio-buttons {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     position: absolute;
     bottom: 4rem;
     width: 100%;
-    padding: 0.5rem; 
+    padding: 0.5rem;
     cursor: pointer;
 }
 
+@media (max-width: 1231px) {
+    .radio-buttons {
+        position: absolute;
+        bottom: 15rem;
+    }
+}
+
 .radio-buttons input[type="radio"] {
-    margin: 0 0.5rem; 
+    margin: 0 0.5rem;
     cursor: pointer;
 }
 
 .radio-buttons input[type="radio"]:checked + label {
-    border: 2px solid #0077cc; 
-    background-color: #0077cc; 
-    color: white; 
-    padding: 0.2rem 0.5rem; 
-    border-radius: 5px; 
+    border: 2px solid #0077cc;
+    background-color: #0077cc;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-input{
+input {
     margin-left: 0.5rem;
 }
 
@@ -52,45 +60,43 @@ input{
 .next-button {
     position: absolute;
     font-size: 24px;
-    background: rgba(0, 0, 0, 0.5); /* Baggrundsfarve med gennemsigtighed */
+    background: rgba(0, 0, 0, 0.5);
     border: none;
     cursor: pointer;
     color: white;
-    padding: 4px 6px; /* Tilføj polstring for at øge knappernes størrelse */
-    border-radius: 4px; /* Runde hjørner */
-    transition: background 0.3s; /* Tilføj en overgangseffekt for baggrundsfarven */
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: background 0.3s;
     z-index: 3;
     margin-bottom: 8rem;
 }
 
 .prev-button:hover,
 .next-button:hover {
-    background: rgba(0, 0, 0, 0.8); /* Ændre baggrundsfarven ved hover */
+    background: rgba(0, 0, 0, 0.8);
     transform: scale(1.1);
 }
 
 .prev-button {
-    left: 5rem; /* Juster højre position for at placere den til højre */
+    left: 5rem;
     bottom: 14rem;
 }
 
 .next-button {
-    right: 5rem; /* Juster højre position for at placere den til højre */
+    right: 5rem;
     bottom: 14rem;
 }
-/* Tilføj farve til radio-knapper og labels */
+
 .radio-buttons input[type="radio"] {
     appearance: none;
-    width: 1rem; /* Juster størrelsen på cirklen efter behov */
+    width: 1rem;
     height: 1rem;
-    border: 2px solid hsl(0, 0%, 100%); /* Farve på cirkelkanten */
+    border: 2px solid hsl(0, 0%, 100%);
     background-color: transparent;
-    border-radius: 50%; /* Rund cirkelkanten for at gøre den til en cirkel */
+    border-radius: 50%;
 }
 
-/* Stil for den valgte radio-knap */
-.radio-buttons input[type="radio"]:checked  {
-    /* Ændr farven på den valgte radio-knap (cirkelkanten) */
+.radio-buttons input[type="radio"]:checked {
     width: 1.6rem;
     height: 1.6rem;
     background-color: hsl(0, 100%, 51%);

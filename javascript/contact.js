@@ -7,9 +7,8 @@ function submitHandler(event) {
     event.preventDefault();
     success = true;
 
-    const formData = {}; // Object to store form data
+    const formData = {}; 
 
-    // Capture form data
     Array.from(event.target.elements).forEach((field) => {
         if (field.type !== "submit") {
             formData[field.name] = field.value;
@@ -19,51 +18,39 @@ function submitHandler(event) {
     Array.from(event.target.elements).forEach(validate);
 
     if (success) {
-        // Show the success popup
         document.getElementById("successPopup").style.display = "block";
 
-        // Update the content of the popup with form data
         updatePopupContent(formData);
     }
 }
 
-// Function to capitalize the first letter of a string
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-// Inside the updatePopupContent function
 function updatePopupContent(formData) {
     const formDataContainer = document.getElementById("formDataContainer");
 
-    // Clear previous content
     formDataContainer.innerHTML = "";
 
-    // Display form data in the popup
     for (const [key, value] of Object.entries(formData)) {
         const dataItem = document.createElement("p");
 
-        // Capitalize the first letter of the key and append to the <p> element
         dataItem.innerHTML = `${capitalizeFirstLetter(key)}: `;
 
-        // Create a span for the user input
         const userInputSpan = document.createElement("span");
         userInputSpan.textContent = value;
 
-        // Append the user input span to the <p> element
         dataItem.appendChild(userInputSpan);
 
-        // Append the <p> element to the container
         formDataContainer.appendChild(dataItem);
     }
 }
 
-// Add an event listener to close the popup when the "Close" button is clicked
 document.getElementById("closePopup").addEventListener("click", function () {
     document.getElementById("successPopup").style.display = "none";
 });
 
-// Update the validate function to use the statusMessage class and add different classes for different messages
 function validate(field) {
     if (field.nodeName === "BUTTON") return; // guard clause
 

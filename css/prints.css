@@ -52,27 +52,25 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-
-/* Your existing styles for cart-container */
 .cart-container {
     display: none;
     position: absolute;
-    top: 4.7rem; /* Adjust the top position according to your layout */
+    top: 4.7rem;
     right: 0;
     background-color: var(--bg-color);
     border: 1px solid var(--main-color);
     border-radius: 10px;
-    padding: 20px; /* Adjust padding as needed */
+    padding: 20px;
     z-index: 1;
-    width: 300px; /* Adjust width as needed */
+    width: 300px;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
 }
 
 .cart-container h4 {
     margin-top: 0;
-    font-size: 1.8rem; /* Adjust font size as needed */
-    color: var(--text-color); /* Adjust color as needed */
+    font-size: 1.8rem;
+    color: var(--text-color);
 }
 
 .cart-list {
@@ -86,8 +84,8 @@
 
 .cart-container .totalpris {
     margin-top: 20px;
-    font-size: 1.6rem; /* Adjust font size as needed */
-    color: var(--text-color); /* Adjust color as needed */
+    font-size: 1.6rem;
+    color: var(--text-color);
 }
 
 .RemoveAll,
@@ -96,11 +94,11 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1.6rem; /* Adjust font size as needed */
+    font-size: 1.6rem;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    width: 100%; /* Full width initially */
-    margin-right: 0; /* No margin initially */
+    width: 100%;
+    margin-right: 0;
 }
 
 .checkout-btn{
@@ -108,10 +106,9 @@
 }
 
 .RemoveAll{
-    background-color: var(--alert-color); /* Adjust background color as needed */
-    color: var(--text-color); /* Adjust text color as needed */
+    background-color: var(--alert-color);
+    color: var(--text-color);
 }
-/* Add these styles to your existing CSS file or create a new one */
 
 .slideshow-container {
     position: relative;
@@ -147,12 +144,12 @@
     align-items: center;
     text-decoration: none;
     color: #333;
-    font-size: 20px; /* Adjust the font size as needed */
+    font-size: 20px;
 }
 
 .cart-amount {
-    margin-right: 5px; /* Adjust the margin as needed for spacing */
-    font-size: 14px; /* Adjust the font size as needed */
+    margin-right: 5px;
+    font-size: 14px;
 }
 
 .cart-list {
@@ -244,7 +241,7 @@
 }
 
 .cart-list li img {
-    max-width: 80px; /* Juster efter behov */
+    max-width: 80px;
     margin-right: 10px;
     border-radius: 5px;
 }
@@ -252,5 +249,3 @@
 .cart-list li .cart-item-details {
     flex-grow: 1;
 }
-
-

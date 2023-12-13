@@ -162,31 +162,23 @@
 }
 
 
-/* Placeholder i autofyldte felter */
 ::-webkit-input-placeholder {
-    /* Farve på placeholder-tekst, juster efter dit design */
     color: var(--text-color);
 }
 
-/* Tekstfarve i autofyldte felter */
 input:-webkit-autofill {
-    /* Juster baggrundsfarven, så det ser ud som tekst er skrevet i feltet */
     box-shadow: 0 0 0px 1000px var(--bg-color) inset;
-    /* Farve på teksten, juster efter dit design */
     -webkit-text-fill-color: var(--text-color);
-    /* Skrifttype, juster efter dit design */
-    font-family: 'Poppins', sans-serif; /* Eksempel på skrifttype (ændre til din foretrukne skrifttype) */ 
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Overordnet regel for alle input-felter */
 input {
-    font-family: 'Poppins', sans-serif; /* Skrifttype efter eget valg */
-    font-size: 1.6rem; /* Tekststørrelse efter eget valg */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
 }
 
-/* Specifikke regler for autofyldte felter */
 input:-webkit-autofill {
-    box-shadow: 0 0 0px 1000px var(--bg-color) inset; /* Juster baggrundsfarven efter dit design */
-    font-family: 'Poppins', sans-serif; /* Skrifttype efter eget valg */
-    font-size: 1.6rem; /* Tekststørrelse efter eget valg */
+    box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
 }
