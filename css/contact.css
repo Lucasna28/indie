@@ -2,7 +2,7 @@
     min-height: auto;
     padding-bottom: 20rem;
     background: var(--bg-color);
-    height: 100vh;
+    height: 100%;
 }
  
 .contact form{
